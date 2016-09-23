@@ -13,8 +13,12 @@ def generate_fib(num):
 
    return fib_nums
 
-while quit != "quit":
+def get_num():
    num = int(input("Input how many Fibonnaci numbers you want generated:"))
+   return num
+
+while quit != "quit":
+   num = get_num()
    seq = generate_fib(num)
    print("The fibonacci sequence generated is:{0}".format(seq))
    quit = input("Press enter to generate another fibonnaci sequence or type quit to end:\n")
